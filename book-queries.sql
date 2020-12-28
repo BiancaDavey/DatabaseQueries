@@ -1,12 +1,4 @@
--- COSC210 Practical Assignment 1
-
--- Notes:
--- Question 1 returns two tuples with the book_title value being "The Cat in the Hat" due to their being separate records of two books with different date values for publication.
--- Question 6 returns separate tuples with identical book_title values due to their having different values for edition_isbn and therefore being distinct records.
-
-
--- *******************************************************************
-
+-- SQL example queries.
 
 CREATE VIEW old_books(first_name, last_name, book_title, edition) AS SELECT first_name, last_name, title, edition FROM authors, books, editions WHERE authors.author_id = books.author_id AND books.book_id = editions.book_id AND publication < '1990-01-01';
 
